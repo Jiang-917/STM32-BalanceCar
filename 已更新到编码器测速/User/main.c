@@ -18,14 +18,14 @@ int main(void)
 	R_Encoder_Init();
 	TIM4_Init();
 
-//	L_Motor_SetSpeed(50);
-//	R_Motor_SetSpeed(50);
+	L_Motor_SetSpeed(50);
+	R_Motor_SetSpeed(50);
 	
 	
 	while (1)
 	{
-//		OLED_ShowSignedNum(1, 1,L_Speed, 5);
-//		OLED_ShowSignedNum(2, 1,R_Speed, 5);
+		OLED_ShowSignedNum(1, 1,L_Speed, 3);
+		OLED_ShowSignedNum(1, 8,R_Speed, 3);
 		MPU6050_GetData(&AX, &AY, &AZ, &GX, &GY, &GZ);
 
 		OLED_ShowSignedNum(2, 1, AX, 5);
